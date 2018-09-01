@@ -1,0 +1,6 @@
+alias ls='ls -ahlFG'
+alias rm='rm -i'
+alias mv='mv -i'
+alias cp='cp -i'
+alias vi='vim'
+alias nano='nano -w'
