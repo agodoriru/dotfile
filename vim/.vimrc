@@ -65,3 +65,24 @@ set hlsearch "検索語をハイライト表示
 nmap <Esc><Esc> :nohlsearch<CR><Esc> 
 " <Esc>２回でハイライト解除
 
+
+" allow setting
+" https://qiita.com/sawanoboly/items/3b599f6141cc637e1e74
+"
+
+function! Arrowdisable ()
+	noremap <Up> <Nop>
+	noremap <Down> <Nop>
+	noremap <Left> <Nop>
+	noremap <Right> <Nop>
+endfunction
+
+function! Arrowenable ()
+	noremap <Up> <Up>
+	noremap <Down> <Down>
+	noremap <Left> <Left>
+	noremap <Right> <Right>
+endfunction
+
+command! Arrowdisable call Arrowdisable()
+command! Arrowenable call Arrowenable()
