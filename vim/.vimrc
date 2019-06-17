@@ -13,6 +13,8 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/neomru.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'gregsexton/gitv'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
