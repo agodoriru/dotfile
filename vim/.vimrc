@@ -15,6 +15,9 @@ Plugin 'Shougo/neomru.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'gregsexton/gitv'
+Plugin 'rhysd/vim-clang-format'
+Plugin 'vim-operator-user'
+Plugin 'vimproc.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -73,7 +76,8 @@ let g:hybrid_use_iTerm_colors = 1
 hi String     ctermfg=red guifg=Orange cterm=none gui=none
 syntax on
 
-colorscheme molokai
+" colorscheme molokai
+colorscheme cobalt
 
 " ==========================================
 " tab
