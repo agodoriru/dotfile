@@ -1,0 +1,49 @@
+# Inserts a blank line between shell prompts
+# add_newline = true
+
+format = """
+$username\
+$directory\
+$git_branch\
+\n$character\
+"""
+
+right_format = """
+$cmd_duration\
+$time
+"""
+
+[username]
+# disabled = false
+style_user = 'bold fg:#50F050'
+format = '[$user]($style) in '
+show_always	= true
+
+[directory]
+truncation_length = 8
+# truncation_symbol = '…/'
+home_symbol = '~'
+
+[git_branch]
+format = 'on [$branch(:$remote_branch)]($style) '
+
+# Replace the '❯' symbol in the prompt with '➜'
+[character] # The name of the module we are configuring is 'character'
+error_symbol = "[🐾 ❯](bold red)"
+success_symbol = '[🐕 ❯](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+
+[cmd_duration]
+min_time = 1
+style = 'fg:#F0F050'
+format = "[$duration]($style)"
+
+[time]
+disabled = false
+style = 'bold fg:#50F0F0'
+format = ' [$time]($style)'
+time_format = '%T'
+utc_time_offset = '+9'
+
+# Disable the package module, hiding it from the prompt completely
+# [package]
+# disabled = true
