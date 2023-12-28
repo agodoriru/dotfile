@@ -1,28 +1,54 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+packadd vim-jetpack
+call jetpack#begin()
+Jetpack 'tani/vim-jetpack'
+Jetpack 'scrooloose/nerdtree'
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'Shougo/unite.vim'
-Plugin 'Shougo/neomru.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Lokaltog/vim-powerline'
-Plugin 'gregsexton/gitv'
-Plugin 'rhysd/vim-clang-format'
-Plugin 'vim-operator-user'
-Plugin 'vimproc.vim'
 
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
+Jetpack 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Jetpack 'junegunn/fzf.vim'
+Jetpack 'neoclide/coc.nvim', {'branch': 'release'}
+Jetpack 'tpope/vim-fugitive'
+Jetpack 'tpope/vim-surround'
+Jetpack 'scrooloose/syntastic'
+Jetpack 'VundleVim/Vundle.vim'
+Jetpack 'rking/ag.vim'
+" Jetpack 'flazz/vim-colorschemes'
+Jetpack 'Shougo/unite.vim'
+Jetpack 'Shougo/neomru.vim'
+Jetpack 'Lokaltog/vim-powerline'
+Jetpack 'gregsexton/gitv'
+Jetpack 'rhysd/vim-clang-format'
+" Jetpack 'vim-operator-user'
+" Jetpack 'vimproc.vim'
+call jetpack#end()
+
+
+
+" " set the runtime path to include Vundle and initialize
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
+" " alternatively, pass a path where Vundle should install plugins
+" "call vundle#begin('~/some/path/here')
+
+" " let Vundle manage Vundle, required
+" Plugin 'VundleVim/Vundle.vim'
+" Plugin 'flazz/vim-colorschemes'
+" Plugin 'Shougo/unite.vim'
+" Plugin 'Shougo/neomru.vim'
+" Plugin 'scrooloose/nerdtree'
+" Plugin 'Lokaltog/vim-powerline'
+" Plugin 'gregsexton/gitv'
+" Plugin 'rhysd/vim-clang-format'
+" Plugin 'vim-operator-user'
+" Plugin 'vimproc.vim'
+
+" call vundle#end()            " required
+" filetype plugin indent on    " required
+" " To ignore plugin indent changes, instead use:
+" "filetype plugin on
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -77,7 +103,7 @@ hi String     ctermfg=red guifg=Orange cterm=none gui=none
 syntax on
 
 " colorscheme molokai
-colorscheme cobalt
+" colorscheme cobalt
 
 " ==========================================
 " tab
