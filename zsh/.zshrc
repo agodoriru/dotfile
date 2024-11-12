@@ -62,3 +62,8 @@ HISTFILESIZE=10000
 # tools
 eval "$(starship init zsh)"
 tmux source ~/.tmux.conf
+
+alias vim='nvim'
+alias vi='nvim'
+
+export PATH="$PATH:/opt/nvim/"
